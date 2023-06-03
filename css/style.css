@@ -1,0 +1,20 @@
+.input-group {
+    width: 400px;
+}
+
+.container>div>div>button {
+    color: black;
+}
+
+
+header div :nth-child(2) {
+    width: 500px;
+}
+
+header div :nth-child(2)>input {
+    margin-left: 20px;
+}
+
+footer {
+    color: white;
+}
