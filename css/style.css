@@ -18,3 +18,15 @@ header div :nth-child(2)>input {
 footer {
     color: white;
 }
+
+.urgente {
+    background-color: tomato;
+}
+
+.diario {
+    background-color: aqua;
+}
+
+.mensual {
+    background-color: lightgreen;
+}
