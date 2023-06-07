@@ -19,26 +19,30 @@ footer {
     color: white;
 }
 
-.URGENTE {
+.urgente {
     background-color: tomato;
-    width: 400px;
-    height: 150px;
+    width: 150px;
+    height: 100px;
 }
 
-.Diaria {
+.diaria {
     background-color: aqua;
-    width: 400px;
-    height: 150px;
+    width: 150px;
+    height: 100px;
 }
 
-.Mensual {
+.mensual {
     background-color: lightgreen;
-    width: 400px;
-    height: 150px;
+    width: 150px;
+    height: 100px;
 }
 
 .delete {
     background-color: red;
-    width: 120px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
+}
+
+ul {
+    list-style: none;
 }

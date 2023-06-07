@@ -3,10 +3,12 @@ const selectPrioridad = document.querySelector('#selectPrioridad');
 const inputGuardar = document.querySelector('#inputGuardar');
 const btnGuardar = document.querySelector('#guardar');
 const ul = document.querySelector('main ul');
+const inputSearch = document.querySelector('#search');
 
 let id = 3;
 
 guardarTarea.addEventListener('submit', getData);
+inputSearch.addEventListener('keypress', getSearch);
 
 function saveTask(pList, pTask) {
     let duplicado = pList.findIndex(task => task.titulo === pTask.titulo);
@@ -44,15 +46,38 @@ function getData(event) {
 }
 
 
+
 function printOneTask(pTask, pDom) {
-    const li = document.createElement('li');
     const button = document.createElement('button');
+    button.classList.add('delete');
+    button.addEventListener('click', deleteElement);
+
+    const li = document.createElement('li');
+
     li.classList.add(`${pTask.prioridad}`);
+
 
     li.textContent = pTask.titulo;
     button.textContent = 'Borrar';
     pDom.append(li);
     li.append(button);
+
+    return li;
+}
+
+function getSearch(event) {
+    let word = '';
+    if (event.key === 'Enter') {
+        word = inputSearch.value;
+    }
+    console.log(word);
+    return
+}
+
+function deleteElement(event) {
+
+    event.target.parentElement.remove();
+
 }
 
 
