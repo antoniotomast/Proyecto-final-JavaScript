@@ -62,23 +62,27 @@ function printOneTask(pTask, pDom) {
     pDom.append(li);
     li.append(button);
 
-    return li;
 }
 
 function getSearch(event) {
-    let word = '';
-    if (event.key === 'Enter') {
-        word = inputSearch.value;
-    }
-    console.log(word);
-    return
+    event.key === 'enter';
+
 }
+
 
 function deleteElement(event) {
-
     event.target.parentElement.remove();
-
 }
+
+function filterByPriority(pList, pPrioridad) {
+    return pList.filter(task => task.prioridad.toLowerCase() === pPrioridad.toLowerCase());
+}
+
+function printAllTasks(pList, pDom) {
+    pList.forEach(task => printOneTask(task, pDom));
+}
+
+printAllTasks(taskList, ul);
 
 
 /*<ul id="listaTareas">
