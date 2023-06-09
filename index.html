@@ -9,40 +9,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/data.js"></script>
 </head>
 
 <body>
 
     <header>
         <div class="container">
-            <div class="row p-3" style="background-color: lightgray;">
-                <div class="input-group m-3">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Prioridad</button>
-                    <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="#">URGENTE</a></li>
-                        <li><a class="dropdown-item" href="#">Diaria</a></li>
-                        <li><a class="dropdown-item" href="#">Mensual</a></li>
-                    </ul>
-                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+            <div class="col-9">
+                <div class="row x-1" style="background-color: lightgray;" id="guardarTarea">
+                    <form class="input-group col-12 col-md-3">
+                        <select class="col form-select" id="selectPrioridad" name="prioridad">
+                            <option selected>Selecciona prioridad</option>
+                            <option value="urgente">URGENTE</option>
+                            <option value="diaria">Diaria</option>
+                            <option value="mensual">Mensual</option>
+                        </select>
+                        <input type="text" class="form-control" id="inputGuardar" name="titulo">
+                        <button type="submit" class="btn btn-success col-12 col-md-1" id="guardar"
+                            name="submit">Guardar</button>
+                    </form>
+
                 </div>
-                <button type="button" class="btn btn-success col-sm-12 col-md-1 m-3 p-1">Guardar</button>
-            </div>
-            <div class="row p-3">
-                <select class="col form-select" aria-label="Default select example">
-                    <option selected>Abre este menú select</option>
-                    <option value="1">URGENTE</option>
-                    <option value="2">Diaria</option>
-                    <option value="3">Mensual</option>
-                </select>
-                <input class="form-control me-2 col" type="search" placeholder="Buscar" aria-label="Search">
+                <div class="row">
+                    <select class="col-12 col-md-4 form-select" id="filtro">
+                        <option selected>Abre este menú select</option>
+                        <option value="urgente">URGENTE</option>
+                        <option value="diaria">Diaria</option>
+                        <option value="mensual">Mensual</option>
+                    </select>
+                    <input class="form-control col-md-4 col-12" type="search" placeholder="Buscar" id="search">
+                </div>
             </div>
         </div>
     </header>
     <main>
-        <div class="tarea">
-            <p></p>
-        </div>
+        <ul>
+
+        </ul>
     </main>
     <footer>
         <div class="container">

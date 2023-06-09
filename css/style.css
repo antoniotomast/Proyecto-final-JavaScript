@@ -1,3 +1,12 @@
+#guardarTarea {
+    height: 70px;
+}
+
+#inputGuardar {
+
+    height: 50px;
+}
+
 .input-group {
     width: 400px;
 }
@@ -17,4 +26,32 @@ header div :nth-child(2)>input {
 
 footer {
     color: white;
+}
+
+.urgente {
+    background-color: tomato;
+    width: 150px;
+    height: 100px;
+}
+
+.diaria {
+    background-color: aqua;
+    width: 150px;
+    height: 100px;
+}
+
+.mensual {
+    background-color: lightgreen;
+    width: 150px;
+    height: 100px;
+}
+
+.delete {
+    background-color: red;
+    width: 40px;
+    height: 40px;
+}
+
+ul {
+    list-style: none;
 }
