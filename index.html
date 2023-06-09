@@ -16,29 +16,30 @@
 
     <header>
         <div class="container">
-            <div class="row" style="background-color: lightgray;" id="guardarTarea">
-                <form class="input-group m-3">
-                    <select class="col form-select" aria-label="Default select example" id="selectPrioridad"
-                        name="prioridad">
-                        <option selected>Selecciona prioridad</option>
+            <div class="col-9">
+                <div class="row x-1" style="background-color: lightgray;" id="guardarTarea">
+                    <form class="input-group col-12 col-md-3">
+                        <select class="col form-select" id="selectPrioridad" name="prioridad">
+                            <option selected>Selecciona prioridad</option>
+                            <option value="urgente">URGENTE</option>
+                            <option value="diaria">Diaria</option>
+                            <option value="mensual">Mensual</option>
+                        </select>
+                        <input type="text" class="form-control" id="inputGuardar" name="titulo">
+                        <button type="submit" class="btn btn-success col-12 col-md-1" id="guardar"
+                            name="submit">Guardar</button>
+                    </form>
+
+                </div>
+                <div class="row">
+                    <select class="col-12 col-md-4 form-select" id="filtro">
+                        <option selected>Abre este menú select</option>
                         <option value="urgente">URGENTE</option>
                         <option value="diaria">Diaria</option>
                         <option value="mensual">Mensual</option>
                     </select>
-                    <input type="text" class="form-control" id="inputGuardar" name="titulo">
-                    <button type="submit" class="btn btn-success col-sm-12 col-md-1" id="guardar"
-                        name="submit">Guardar</button>
-                </form>
-
-            </div>
-            <div class="row p-3">
-                <select class="col form-select" aria-label="Default select example" id="filtro">
-                    <option selected>Abre este menú select</option>
-                    <option value="urgente">URGENTE</option>
-                    <option value="diaria">Diaria</option>
-                    <option value="mensual">Mensual</option>
-                </select>
-                <input class="form-control me-2 col" type="search" placeholder="Buscar" aria-label="Search" id="search">
+                    <input class="form-control col-md-4 col-12" type="search" placeholder="Buscar" id="search">
+                </div>
             </div>
         </div>
     </header>
